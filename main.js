@@ -29,7 +29,8 @@ var alturaValida =  true;
 if(pesoValido && alturaValida){
     // acessa e altera o imc
     var tdImc = paciente.querySelector(".info-imc");
-    tdImc.textContent = imc;
+    tdImc.textContent = "peso invalido!" ;
+    paciente.style.backgroundcolor 
     }
 
     if(peso <= 0 || peso >= 1000){
