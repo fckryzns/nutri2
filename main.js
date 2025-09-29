@@ -1,8 +1,8 @@
 // muda o nome a partir do seletor de classe
 var subtitulo = document.querySelector(".subtitulo");
 subtitulo.textContent = "Meus Pacientes";
-var nutricao = document.querySelector(".titulo");
-nutricao.textContent = "Ryan Nutrição";
+var titulo = document.querySelector(".titulo");
+titulo.textContent = "Ryan Nutrição";
 
 //acessar a tag tr -menos o  paciente Paulo
 var pacientes = document.querySelectorAll(".paciente");
@@ -30,8 +30,8 @@ if(pesoValido && alturaValida){
     // acessa e altera o imc
     var tdImc = paciente.querySelector(".info-imc");
     tdImc.textContent = "peso invalido!" ;
-    paciente.style.backgroundcolor 
-    }
+    paciente.classList.add("campo-invalido")   
+}
 
     if(peso <= 0 || peso >= 1000){
         var pesoValido = false;
@@ -41,7 +41,14 @@ if(pesoValido && alturaValida){
 if(altura < 0 || altura > 3.00){
     var alturaValida = false;
     tdImc.textContent = "altura inválida";
+    paciente.classList.add("campo-invalido")  
+}
+
 }
 
 
+titulo.addEventListener('click', mostraMensagem);
+
+function mostraMensagem(){
+    alert("Este elemento foi clicado");
 }
